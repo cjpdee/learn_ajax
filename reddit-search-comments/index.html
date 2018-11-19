@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <h1>Subreddit comment data collector</h1>
+        <em>What this tool does:</em>
+        <p>1. Collect all the users who posted to a given subreddit<br />
+        2. Return a huge object with each of those users' other recent comments, and which subreddit they are posted in</p>
+        <form action="">
+            <div id="results-config">
+                <h2>Results range</h2>
+                <label for="number-of-results">How many posts do you want to collect?</label>
+                <!-- <input type="range" name="" id="number-of-results" min="10" max="1000"> -->
+                <input type="number" name="" id="number-of-results" data-js-search="number-of-results" placeholder="100">
+            </div>
+
+            <div id="subreddit-config">
+                <h2>Subreddit Config</h2>
+
+                <label for="subreddit">Subreddit: </label>
+                <input type="text" name="" id="subreddit" data-js-search="subreddit" placeholder="all">
+
+                <label for="sort-by">Sort by: </label>
+                <select name="" id="sort-by" data-js-search="sort-by">
+                    <option value="top">Top</option>
+                    <option value="hot">Hot</option>
+                    <option value="new">New</option>
+                    <option value="controversial">Controversial</option>
+                </select>
+
+                <label for="date-range">From past: </label>
+                <select name="" id="date-range" data-js-search="date-range">
+                    <option value="all">All time</option>
+                    <option value="year">Year</option>
+                    <option selected value="month">Month</option>
+                    <option value="week">Week</option>
+                    <option value="day">24 hours</option>
+                    <option value="hour">Hour</option>
+                </select>
+
+                <label for="post-type">Post / media format</label>
+                <select name="" id="post-type" data-js-search="post-type">
+                    <option value="all">All</option>
+                    <option value="self">Self</option>
+                    <option value="img">Image</option>
+                </select>
+            </div>
+
+            <div id="user-comment-config">
+                <h2>User Comments Config</h2>
+                <label for="limit-to-sub">Limit to subreddit?</label>
+                <input type="checkbox" name="" id="limit-to-sub" data-js-search="limit-to-sub">
+            </div>
+
+            <button id="submit" data-js-search="submit">Get Data</button>
+        </form>
+
+        <div class="output-wrap">
+            <div class="output">
+                <div class="header">
+                    <span class="username">Username</span>
+                </div>
+                <div class="comment">
+                    <span class="score">511</span>
+                    <span class="sub">Subreddit</span>
+                    <p>comment copy</p>
+                </div>
+                <div class="comment">
+                    <span class="score">511</span>
+                    <span class="sub">Subreddit</span>
+                    <p>comment copy</p>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
